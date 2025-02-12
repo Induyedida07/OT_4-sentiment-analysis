@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis for Financial News</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #FFE5B4; /* Light peach background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            flex-direction: column;
+        }
+
+        /* Heading Styling */
+        h1 {
+            color: #FF7F50; /* Dark salmon color */
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Button Styling (as an <a> tag) */
+        .predict-button {
+            display: inline-block;
+            background-color: #FFA07A; /* Light salmon color */
+            color: white;
+            padding: 20px 40px;
+            font-size: 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+            transition: background-color 0.3s ease;
+        }
+
+        .predict-button:hover {
+            background-color: #FF7F50; /* Darker salmon color on hover */
+        }
+
+        /* Pulse Animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* FadeIn Animation for Heading */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Heading -->
+    <h1>Sentiment Analysis for Financial News</h1>
+
+    <!-- Predict Sentiment Button (using an <a> tag for navigation) -->
+    <a href="/predict" class="predict-button">Predict Sentiment</a>
+</body>
+</html>
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Result</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Grande', sans-serif;
+            background: #FFE5D9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .result-container {
+            text-align: center;
+            background: #FFF1E6;
+            border: 2px solid #FFD1BA;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease;
+            max-width: 80%;
+        }
+
+        .result-title {
+            font-size: 2em;
+            color: #FF7F50;
+            margin-bottom: 20px;
+        }
+
+        .result-output {
+            font-size: 1.5em;
+            padding: 15px;
+            border-radius: 10px;
+            transition: background 0.5s ease;
+        }
+
+        /* Color-coded backgrounds for sentiment */
+        .positive {
+            background: #D4EDDA;
+            color: #155724;
+        }
+
+        .negative {
+            background: #F8D7DA;
+            color: #721C24;
+        }
+
+        .neutral {
+            background: #E2E3E5;
+            color: #383D41;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <div class="result-title">Sentiment Analysis Result</div>
+        <div class="result-output {{ sentiment_class }}">{{ emoji }} {{ sentiment_text }}</div>
+        <br>
+        <a href="/" style="text-decoration:none; color:#FF7F50;">Analyze Another Message</a>
+    </div>
+</body>
+</html>
+
